@@ -1,0 +1,13 @@
+services:
+  icorp-interview:
+    build: .
+    container_name: icorp-interview
+    restart: unless-stopped
+    ports:
+      - '127.0.0.1:3099:3099'
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      # TEST_API_URL: "https://test.icorp.uz/interview.php"
+      # CALLBACK_URL: "https://icorp.genix.uz/v1/interview/callback"

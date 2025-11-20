@@ -1,0 +1,10 @@
+Bu yerda basically senga test topshirig‘i berilyapti: bitta skript yozasan (Node, Python, Go – farqi yo‘q) va 
+u [https://test.icorp.uz/interview.php](https://test.icorp.uz/interview.php) bilan HTTP orqali “gaplashadi”. 
+1) Avval POST so‘rov yuborasan, bodysida JSON bo‘ladi: `{ "msg": "...", "url": "https://sening-webhook-url'ing" }`. 
+Javobdan “kod”ning 1-qismini olasan. 
+2) Shu “url” ga server ikkinchi qismini yuboradi (masalan, sening lokal /callback route’ingga). 
+3) Birinchi va ikkinchi qismlarni qo‘shib (konkatatsiya qilib) bitta “code” qilib olasan. 
+4) Endi yana o‘sha endpointga ([https://test.icorp.uz/interview.php](https://test.icorp.uz/interview.php)) GET so‘rov yuborib,
+ query param sifatida `?code=...` yuborasan. 
+5) Javobda asl xabar (msg) qaytadi. Talablar: konsolda yoki web sahifada yakuniy xabarni va yig‘ilgan code’ni ko‘rsatish, 
+ kodni GitHub/GitLab’ga README bilan joylash, hammasini bitta faylda qilsa, qo‘shimcha ball, va bunga 2–3 kun vaqt berilgan.
