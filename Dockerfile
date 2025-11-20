@@ -2,8 +2,8 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-# Install yarn (project uses yarn.lock)
-RUN npm i -g yarn
+# Enable yarn (comes with Node 20 via corepack)
+RUN corepack enable
 
 # Install deps
 COPY package.json yarn.lock ./
@@ -13,9 +13,7 @@ RUN yarn install --frozen-lockfile
 COPY . .
 RUN yarn build
 
+ENV NODE_ENV=production
 EXPOSE 3099
 
-ENV NODE_ENV=production
-
-# If you have "start:prod" script you can also use: ["yarn", "start:prod"]
 CMD ["node", "dist/main.js"]

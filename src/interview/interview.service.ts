@@ -5,13 +5,12 @@ import {
 } from '@nestjs/common';
 import axios from 'axios';
 import * as dotenv from 'dotenv';
-
 dotenv.config();
 
 const TEST_API_URL =
   process.env.TEST_API_URL ?? 'https://test.icorp.uz/interview.php';
 const CALLBACK_URL =
-  process.env.CALLBACK_URL ?? 'https://your-domain/interview/callback'; // override in .env
+  process.env.CALLBACK_URL ?? 'https://icorp.genix.uz/interview/callback'; // override in .env
 const MESSAGE = process.env.MESSAGE ?? 'Salom test';
 
 @Injectable()
